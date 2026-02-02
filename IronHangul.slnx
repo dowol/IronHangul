@@ -5,5 +5,6 @@
     <File Path="README.md" />
     <File Path=".editorconfig" />
   </Folder>
+  <Project Path="src/IronHangul.Hanja/IronHangul.Hanja.csproj" />
   <Project Path="test/IronHangulTest.csproj" />
 </Solution>
