@@ -13,4 +13,8 @@
 		<PackageProjectUrl>https://github.com/dowol/ironhangul</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Folder Include="Grammar\" />
+	</ItemGroup>
 </Project>
