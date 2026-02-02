@@ -18,7 +18,7 @@ namespace IronHangul.Combination
         /// <returns></returns>
         public static string ExtractChoseong(this string s, HangulExtractionMode mode = HangulExtractionMode.CompatibilityJamo)
         {
-            
+            throw new NotImplementedException();
         }
     }
 }
