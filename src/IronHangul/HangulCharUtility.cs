@@ -7,7 +7,7 @@ namespace IronHangul
     /// <summary>
     /// 현대 한글 관련 유틸리티 메소드를 제공합니다.
     /// </summary>
-    public static class HangulCharType
+    public static partial class HangulCharUtility
     {
         /// <summary>
         /// 해당 문자가 한글인지 확인합니다.
@@ -26,7 +26,7 @@ namespace IronHangul
         /// <returns></returns>
         public static bool IsHangulConsonant(this char c)
         {
-            return c >= 0x3131 || c <= 0x314e;
+            return c >= 0x3131 && c <= 0x314e;
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace IronHangul
         /// <returns></returns>
         public static bool IsHangulVowel(this char c)
         {
-            return c >= 0x314f || c <= 0x3163;
+            return c >= 0x314f && c <= 0x3163;
         }
 
         /// <summary>
@@ -109,5 +109,24 @@ namespace IronHangul
             return c >= 0xac00 && c <= 0xd7af;
         }
 
+        /// <summary>
+        /// 한글 조합형 자모를 한글 호환 자모(낱자)로 변환합니다
+        /// </summary>
+        /// <param name="c">한글 조합형 자모</param>
+        /// <returns>한글 호환 자모(낱자)</returns>
+        /// <exception cref="ArgumentException"><paramref name="c"/>가 한글 조합형 자모가 아닌 경우</exception>
+        public static char ToCompatibilityJamo(this char c)
+        {
+            if (c.IsHangulCompatibilityJamo()) return c;
+            else if (c.IsHangulChoseong()) return choseongTable[c - CHOSEONG_BEGIN];
+            else if (c.IsHangulJungseong()) return (char)(c - JUNGSEONG_BEGIN);
+            else if (c.IsHangulJongseong()) return jongseongTable[c - JONGSEONG_BEGIN];
+            else
+            {
+                ArgumentException e = new ArgumentException($"'{c}'(U+{c:X4})는 한글 조합형 자모가 아닙니다." , nameof(c));
+                e.Data.Add("Value" , c);
+                throw e;
+            }
+        }
     }
 }
