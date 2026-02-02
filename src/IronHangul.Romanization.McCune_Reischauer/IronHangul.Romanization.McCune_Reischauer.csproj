@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <DocumentationFile>$(SolutionDir)/docs/apiref/$(AssemblyName).xml</DocumentationFile>
+	  <Title>IronHangul extension library for McCune-Reischauer Romanization of Korean(매큔-라이샤워 표기법)</Title>
+	  <Authors>Dowol</Authors>
+	  <PackageProjectUrl>https://github.com/dowol/ironhangul</PackageProjectUrl>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IronHangul.Romanization\IronHangul.Romanization.csproj" />
+    <ProjectReference Include="..\IronHangul\IronHangul.csproj" />
+  </ItemGroup>
+
+</Project>
