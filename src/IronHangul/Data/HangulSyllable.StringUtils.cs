@@ -7,10 +7,6 @@ namespace IronHangul.Data
     public partial class HangulSyllable
     {
 
-        public static HangulSyllableCollection Disassemble(string s)
-        {
-            throw new NotImplementedException();
-        }
 
     }
 }

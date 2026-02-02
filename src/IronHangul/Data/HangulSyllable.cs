@@ -51,7 +51,7 @@ namespace IronHangul.Data
 
         public HangulSyllable(char c)
         {
-
+            
         }
 
         public HangulSyllable(char choseong, char jungseong, char jongseong = '\0')
@@ -61,7 +61,10 @@ namespace IronHangul.Data
             Jongseong = jongseong;
         }
 
+        public HangulSyllable(string s)
+        {
 
+        }
 
 
         public bool HasJongseong()
