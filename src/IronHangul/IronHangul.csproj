@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>enable</Nullable>
+		<RootNamespace>$(SolutionName.Replace(" ", "_"))</RootNamespace>
+		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>$(SolutionDir)/docs/apiref/$(AssemblyName).xml</DocumentationFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>IronHangul Core Library</Title>
+		<Authors>Dowol</Authors>
+		<PackageProjectUrl>https://github.com/dowol/ironhangul</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+</Project>

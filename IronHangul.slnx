@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="src/IronHangul/IronHangul.csproj" />
+  <Folder Name="/Project Root/">
+    <File Path=".gitignore" />
+    <File Path="README.md" />
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="test/IronHangulTest.csproj" />
+</Solution>
