@@ -8,13 +8,4 @@
     <UseVSTest>true</UseVSTest>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\src\IronHangul.Hanja\IronHangul.Hanja.csproj" />
-    <ProjectReference Include="..\src\IronHangul.OldHangul\IronHangul.OldHangul.csproj" />
-    <ProjectReference Include="..\src\IronHangul.Romanization.McCune_Reischauer\IronHangul.Romanization.McCune_Reischauer.csproj" />
-    <ProjectReference Include="..\src\IronHangul.Romanization.Official\IronHangul.Romanization.Official.csproj" />
-    <ProjectReference Include="..\src\IronHangul.Romanization\IronHangul.Romanization.csproj" />
-    <ProjectReference Include="..\src\IronHangul\IronHangul.csproj" />
-  </ItemGroup>
-
 </Project>
