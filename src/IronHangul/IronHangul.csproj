@@ -11,7 +11,6 @@
 		<Title>IronHangul Core Library</Title>
 		<Authors>Dowol</Authors>
 		<PackageProjectUrl>https://github.com/dowol/ironhangul</PackageProjectUrl>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
