@@ -30,8 +30,22 @@ public class CharUtilTest
     }
 
     [TestMethod]
+    [DataRow('ㅎ')]
+    [DataRow('ㅏ')]
+    [DataRow('ㄴ')]
+    [DataRow('글')]
+    [DataRow('\u1106')]
+    [DataRow('\u1161')]
+    [DataRow('\u11af')]
     public void TestConversion(char c)
     {
-
+        try
+        {
+            Console.WriteLine("조합형-호환자모_변환({0}) => {1}" , c , c.ToCompatibilityJamo());
+        }
+        catch(ArgumentException)
+        {
+            Console.WriteLine("'{0}' 은/는 한글 조합형 자모가 아닙니다", c);
+        }
     }
 }
