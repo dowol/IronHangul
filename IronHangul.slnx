@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="IronHangul.Korean/IronHangul.Korean.csproj" Id="312dc612-1641-453a-a58f-98c7fe4093e7" />
   <Project Path="src/IronHangul/IronHangul.csproj" />
   <Folder Name="/Project Root/">
     <File Path=".gitignore" />
