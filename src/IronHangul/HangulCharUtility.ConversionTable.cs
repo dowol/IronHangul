@@ -7,7 +7,6 @@ namespace IronHangul
     public static partial class HangulCharUtility
     {
         private static readonly ushort CHOSEONG_BEGIN = 0x1100;
-        private static readonly ushort JUNGSEONG_BEGIN = 0x1161;
         private static readonly ushort JONGSEONG_BEGIN = 0x11A8;
 
         private static readonly char[] choseongTable =

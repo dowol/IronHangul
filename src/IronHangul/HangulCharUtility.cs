@@ -119,7 +119,7 @@ namespace IronHangul
         {
             if (c.IsHangulCompatibilityJamo()) return c;
             else if (c.IsHangulChoseong()) return choseongTable[c - CHOSEONG_BEGIN];
-            else if (c.IsHangulJungseong()) return (char)(c - JUNGSEONG_BEGIN);
+            else if (c.IsHangulJungseong()) return (char)(c + 0x1fee); // = 낱자 ㅏ(U+314f) - 조합형 ㅏ(U+1161)
             else if (c.IsHangulJongseong()) return jongseongTable[c - JONGSEONG_BEGIN];
             else
             {
